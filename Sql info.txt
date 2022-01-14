@@ -1,0 +1,42 @@
+use CSCI5308_11_DEVINT;
+////
+CREATE TABLE customer_details (
+	customerid int,
+    firstname varchar(255),
+    middlename varchar(255),
+	lastname varchar(255),
+    dateofbirth varchar(255),
+	email varchar(255),
+    mobile bigint,
+	streetno varchar(255),
+    city varchar(255),
+	state varchar(255),
+    pin_code int,
+	passportno varchar(255),
+    isStudent boolean,
+    q1 text,
+    q2 text,
+    q3 text,
+    q4 text
+);
+////
+INSERT INTO customer_details (firstname, middlename,lastname,dateofbirth,email,mobile,streetno,city,state,pin_code,passportno,isStudent)
+VALUES ('Harit','Rakeshbhai','Patwa','26/06/1998','harit@dal.ca',9558212743,'20-B Harinagar Society','Mehsana','Gujarat',384002,'R320349',true);
+////
+
+use CSCI5308_11_DEVINT;
+CREATE TABLE admin_credentials (
+    username varchar(255),
+    p0ssword varchar(255)
+);
+
+////
+INSERT INTO admin_credentials (username, p0ssword)
+VALUES ('harit_patwa','ca0fe23b805ecaf3a50b07028dab04a5d8f2fff76c16cc2045aa27f043ecb28d');
+////
+SET SQL_SAFE_UPDATES=0;
+/////
+DELETE FROM admin_credentials WHERE username='harit';
+
+///
+SELECT p0ssword FROM admin_credentials WHERE username='harit_patwa';
